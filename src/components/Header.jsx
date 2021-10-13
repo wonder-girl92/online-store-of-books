@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
 import { ShoppingBasket } from '@material-ui/icons'
 
-function Header() {
+function Header({handleCart}) {
   return (
     <AppBar position='static'>
       <Toolbar>
@@ -14,7 +14,8 @@ function Header() {
         </Typography>
 
         <IconButton
-        color='inherit'>
+        color='inherit'
+        onClick={handleCart}>
           <ShoppingBasket />
         </IconButton>
       </Toolbar>
