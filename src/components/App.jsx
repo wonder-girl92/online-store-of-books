@@ -4,8 +4,9 @@ import Basket from './Basket'
 import Header from './Header'
 import GoodsList from './GoodsList'
 import Search from './Search'
-import { Container } from '@material-ui/core'
+import Snack from './Snack'
 
+import { Container } from '@material-ui/core'
 import { goods } from '../data/goods'
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
   const [search, setSearch] = useState('')
   const [products, setProducts] = useState(goods)
   const [isCartOpen, setCartOpen] = useState(false)
+  const [isSnackOpen, setSnackOpen] = useState(false)
 
   const handleChange = (e) => {
     if (!e.target.value) {
@@ -60,6 +62,7 @@ const App = () => {
         },
       ])
     }
+    setSnackOpen(true)
   }
 
   const removeFromOrder = (goodsItem) => {
@@ -85,6 +88,10 @@ const App = () => {
         removeFromOrder={removeFromOrder}
         cartOpen={isCartOpen}
         closeCart={() => setCartOpen(false)}
+      />
+      <Snack
+isOpen={isSnackOpen}
+handleClose={() => setSnackOpen(false)}
       />
     </>
   )
