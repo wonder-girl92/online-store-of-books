@@ -73,7 +73,7 @@ const App = () => {
     <>
       <Header
         handleCart={() => setCartOpen(true)}
-        orderLen = {order.length}
+        orderLen={order.length}
       />
       <Container
         sx={{
@@ -90,8 +90,8 @@ const App = () => {
         closeCart={() => setCartOpen(false)}
       />
       <Snack
-isOpen={isSnackOpen}
-handleClose={() => setSnackOpen(false)}
+        isOpen={isSnackOpen}
+        handleClose={() => setSnackOpen(false)}
       />
     </>
   )

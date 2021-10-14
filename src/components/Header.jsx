@@ -2,26 +2,26 @@ import React from 'react'
 import { AppBar, Badge, IconButton, Toolbar, Typography } from '@material-ui/core'
 import { ShoppingBasket } from '@material-ui/icons'
 
-function Header({handleCart, orderLen}) {
+function Header ({ handleCart, orderLen }) {
   return (
-    <AppBar position='static'>
+    <AppBar position="static">
       <Toolbar>
-        <Typography variant='h6' 
-        component='span'
-        sx={{flexGrow: 1}}
+        <Typography variant="h6"
+                    component="span"
+                    sx={{ flexGrow: 1 }}
         >
           MUI Shop
         </Typography>
 
         <IconButton
-        color='inherit'
-        onClick={handleCart}>
+          color="inherit"
+          onClick={handleCart}>
           <Badge
-          color='secondary'
-          badgeContent={orderLen}
+            color="secondary"
+            badgeContent={orderLen}
           >
-          <ShoppingBasket />
-        </Badge>
+            <ShoppingBasket/>
+          </Badge>
         </IconButton>
       </Toolbar>
     </AppBar>
