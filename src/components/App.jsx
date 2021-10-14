@@ -70,6 +70,7 @@ const App = () => {
     <>
       <Header
         handleCart={() => setCartOpen(true)}
+        orderLen = {order.length}
       />
       <Container
         sx={{
